@@ -15,6 +15,9 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
 import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
 
 import { NgAuthService } from "./ng-auth.service";
+import { CarListComponent } from './components/car-list/car-list.component';
+import { CreateCarComponent } from './components/create-car/create-car.component';
+
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { NgAuthService } from "./ng-auth.service";
     SignInComponent,
     SignUpComponent,
     ForgotPasswordComponent,
-    VerifyEmailComponent
+    VerifyEmailComponent,
+    CarListComponent,
+    CreateCarComponent,
+  
   ],
   imports: [
     BrowserModule,
