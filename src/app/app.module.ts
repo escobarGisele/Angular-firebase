@@ -8,6 +8,9 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -37,7 +40,9 @@ import { CreateCarComponent } from './components/create-car/create-car.component
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebae),
     AngularFireAuthModule,
-    AngularFirestoreModule, 
+    AngularFirestoreModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
        
   ],
   providers: [NgAuthService],

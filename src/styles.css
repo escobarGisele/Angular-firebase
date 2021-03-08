@@ -418,3 +418,12 @@ body .table thead th {
   max-width: 150px;
 }
 
+.bodyIndex{
+
+  background:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.2)),url(../src/assets/img/fondoDos.jpg)  ;
+ 
+ background-repeat: no-repeat;
+ background-position: center;
+  height: 100vh;
+  background-size: cover;
+}

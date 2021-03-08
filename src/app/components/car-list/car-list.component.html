@@ -1,1 +1,42 @@
-<p>car-list works!</p>
+
+
+<div class="container mt-4">
+  
+  
+    <div class="card">
+        <div class="card-body">
+          
+            <span class="h3">Listado de autos 
+               <button class="btn btn-dark btn-lg float-right" routerLink="/car-list">Agregar</button>
+              </span>
+            
+            <h5 style="margin-top: 30px;" *ngIf="cars.length == 0">No hay datos para mostrar</h5>
+            <table *ngIf="cars.length > 0" class="table table-striped mt-5">
+                <thead>
+                  <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Patente</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let car of cars">
+                    <td>{{ car.brand }}</td>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.color }}</td>
+                    <td>{{ car.patent }}</td>
+                    <td>
+                      
+                      
+                      <i class="fas fa-edit fa-lg text-info mr-2" [routerLink]="['/editCar/', car.id]"></i>
+                      <i (click)="deleteCar(car.id)" class="fas fa-trash-alt fa-lg text-danger"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+  </div> 
+  
