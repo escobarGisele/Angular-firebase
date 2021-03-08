@@ -1,0 +1,32 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h3>Registrarse</h3>
+
+      <div class="formGroup">
+        <input type="email" class="form-control" placeholder="Dirección de email" #userEmail required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="form-control" placeholder="Contraseña" #userPwd required>
+      </div>
+
+      <div class="formGroup">
+        <input type="button" class="btn btn-block btn-primary" value="Registrarse"
+          (click)="ngAuthService.SignUp(userEmail.value, userPwd.value)">
+      </div>
+
+      <div class="formGroup">
+        <button type="button" class="btn btn-block btn-danger" (click)="ngAuthService.GoogleAuth()">
+          Continue con  Google
+        </button>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>Ya tenes una cuenta? <span class="redirect" routerLink="/sign-in">Iniciar sesión</span></span>
+    </div>
+  </div>
+
+</div>

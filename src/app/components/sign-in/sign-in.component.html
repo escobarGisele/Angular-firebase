@@ -1,0 +1,35 @@
+<div class="displayTable">
+  <div class="displayTableCell">
+
+    <div class="authBlock">
+      <h3>Ingresar</h3>
+      <div class="formGroup">
+        <input type="text" class="form-control" placeholder="Nombre usuario" #userName required>
+      </div>
+
+      <div class="formGroup">
+        <input type="password" class="form-control" placeholder="Contraseña" #userPassword required>
+      </div>
+
+      <div class="formGroup">
+        <input type="button" class="btn btn-primary btn-block" value="Ingresar"
+          (click)="ngAuthService.SignIn(userName.value, userPassword.value)">
+      </div>
+
+      <div class="formGroup">
+        <button type="button" class="btn btn-danger btn-block" (click)="ngAuthService.GoogleAuth()">
+          Entrar con  Google
+        </button>
+      </div>
+
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password">Olvido la contraseña?</span>
+      </div>
+    </div>
+
+    <div class="redirectToLogin">
+      <span>No esta registrado?<span class="redirect" routerLink="/sign-up"> Registrese</span></span>
+    </div>
+
+  </div>
+</div>
